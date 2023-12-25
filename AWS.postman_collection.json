@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "9e54d1f3-fc54-42f3-a833-f251c78d06f5",
+		"name": "AWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23766111"
+	},
+	"item": [
+		{
+			"name": "S3 Event Upload",
+			"request": {
+				"auth": {
+					"type": "awsv4",
+					"awsv4": [
+						{
+							"key": "service",
+							"value": "{{service}}",
+							"type": "string"
+						},
+						{
+							"key": "region",
+							"value": "{{region}}",
+							"type": "string"
+						},
+						{
+							"key": "secretKey",
+							"value": "{{secretKey}}",
+							"type": "string"
+						},
+						{
+							"key": "accessKey",
+							"value": "{{accessKey}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"numberOfObjects\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{functionUrl}}",
+					"host": [
+						"{{functionUrl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

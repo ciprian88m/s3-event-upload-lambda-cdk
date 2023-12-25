@@ -1,18 +1,23 @@
-# Welcome to your CDK Java project!
+# S3 Event Upload Lambda CDK
 
-This is a blank project for CDK development with Java.
+## About this repo
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Setup infrastructure meant for the [s3-event-upload-lambda](https://github.com/ciprian88m/s3-event-upload-lambda) repo.
 
-It is a [Maven](https://maven.apache.org/) based project, so you can open this project with any Maven compatible Java IDE to build and run tests.
+Manages the lambda function, S3 bucket and IAM permissions.
 
-## Useful commands
+The lambda is exposed with a function URL, with IAM authorization. Note that Postman natively supports this feature and 
+a collection is included for easier testing.
 
- * `mvn package`     compile and run tests
- * `cdk ls`          list all stacks in the app
- * `cdk synth`       emits the synthesized CloudFormation template
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk docs`        open CDK documentation
+## Commands
 
-Enjoy!
+Since it's a CDK project, the standard commands apply:
+
+* `mvn package`     compile and run tests
+* `cdk ls`          list all stacks in the app
+* `cdk synth`       emits the synthesized CloudFormation template
+* `cdk deploy`      deploy this stack to your default AWS account/region
+* `cdk diff`        compare deployed stack with current state
+* `cdk docs`        open CDK documentation
+
+You should run `cdk bootstrap` if this is your first CDK project.
