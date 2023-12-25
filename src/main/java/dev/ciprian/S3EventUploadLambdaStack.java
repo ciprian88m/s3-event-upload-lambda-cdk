@@ -37,7 +37,7 @@ public class S3EventUploadLambdaStack extends Stack {
                 .architecture(Architecture.ARM_64)
                 .functionName(functionName)
                 .role(getS3EventUploadLambdaRole())
-                .timeout(Duration.seconds(5))
+                .timeout(Duration.seconds(10))
                 .memorySize(512)
                 .build();
 
